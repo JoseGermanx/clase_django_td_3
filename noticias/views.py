@@ -4,4 +4,4 @@ from .models import Noticia
 
 def listas_noticias(request):
     noticias = Noticia.objects.all().order_by("-fecha_publicacion")
-    return render(request, 'noticias/listar_noticias.html', {'noticias': noticias})
+    return render(request, 'noticias/lista.html', {'noticias': noticias})
